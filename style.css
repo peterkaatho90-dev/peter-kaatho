@@ -1,59 +1,116 @@
-```css
-/* Element selector */
+/* General page styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
     margin: 0;
     padding: 20px;
+    background-color: #f4f6f8;
 }
 
-/* ID selector */
+/* Header */
 #main-header {
+    text-align: center;
+    padding: 20px;
     background-color: #2c3e50;
     color: white;
-    text-align: center;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 8px;
 }
 
-/* Element selector */
-h1 {
-    font-size: 32px;
-}
-
-/* Class selector */
-.expense-section {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-/* Element selector */
-h2 {
-    color: #333;
-}
-
-/* Element selector */
-label {
+#main-header img {
     display: block;
-    margin-top: 15px;
+    margin: 0 auto 10px;
+}
+
+h1 {
     margin-bottom: 5px;
 }
 
-/* Element selector */
-input {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* ID selector */
-#expenses {
-    background-color: #e8f5e9;
-    padding: 25px;
+/* Sections */
+.add-expense-section,
+.expenses-section,
+.help-section,
+.video-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
     border-radius: 8px;
 }
-```
+
+/* Form */
+.add-expense-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input:not([type="submit"]),
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Focus selector */
+input:focus,
+select:focus {
+    outline: 2px solid #3498db;
+}
+
+/* Button */
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Table */
+.expenses-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Descendant selector */
+.expenses-section td,
+.expenses-section th {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Header row */
+.expenses-section th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Alternating rows */
+.expenses-section tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+.expenses-section tbody tr:hover {
+    background-color: #dfefff;
+}
+
+/* Details */
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Video */
+.video-section {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+}
